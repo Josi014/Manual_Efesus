@@ -1,0 +1,115 @@
+:root{
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+
+}
+
+body {
+    flex: 1;
+    /* background-color: var(--lfundo-body); */
+    line-height: 1.6;
+    user-select: none;
+    -webkit-user-drag: none;
+    overflow-x: hidden;
+}
+
+/* header{
+    position: relative; 
+    border-bottom: 1px solid rgb(216 206 246);
+    box-shadow: 0 5px 20px rgb(150 68 255 / 20%);
+    z-index: 3000;
+
+} */
+
+.header_logo {
+    position: relative; 
+    border-bottom: 1px solid rgb(216 206 246);
+    box-shadow: 0 5px 20px rgb(150 68 255 / 20%);
+    z-index: 3000;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-btn {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(4px);
+    width: 30px;
+    height: 25px;
+    display: flex;
+    border: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    top: 0;
+    margin: 10px;
+}
+
+
+.toggle-btn span {
+    height: 4px;
+    background: white;
+    filter: drop-shadow(1px 0 0 gray) drop-shadow(0 1px 0 gray) drop-shadow(-1px 0 0 gray) drop-shadow(0 -1px 0 gray);
+    border-radius: 2px;
+    display: block;
+}
+
+.toggle-btn-mobile {
+    position: absolute;
+    left: 0;
+}
+
+.veplex-logo{
+    width: 100px;
+}
+
+.sidebar-wrapper {
+    position: relative;
+    /* box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2); */
+    box-shadow: 2px 0 30px rgba(0, 0, 0, 0.2);
+    width: 25%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transition: transform var(--speed) ease;
+    z-index: 1000; 
+}
+
+
+body.sidebar-fechado .sidebar-wrapper {
+    transform: translateX(-100%);
+
+}
+
+/* .header__toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 4000;
+} */
+
+
+li{
+    margin: 0;
+    list-style-type: none;    
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.card{
+    position: absolute;
+    width: 100px;
+    padding: 100px;
+    top: 100px;
+    left: calc(45% - 100px);
+    box-shadow: 2px 0 30px rgba(0, 0, 0, 0.2);
+
+}
