@@ -1,0 +1,35 @@
+import { carregarPagina } from "./router.js";
+function controlaMenu() {
+    const toggleBtn = document.getElementById('toggleSidebar');
+    const sidebar = document.getElementById('sidebar');
+
+    if(toggleBtn && sidebar) {
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("sidebar-fechado");
+        });
+    } else {
+        console.warn("Botão ou sidebar não encontrado.");
+    }
+}
+
+
+const itens = document.querySelectorAll("li[data-caminho]");
+
+itens.forEach(item => {
+  item.style.cursor = "pointer";
+
+  item.addEventListener("click", () => {
+    const caminho = item.dataset.caminho;
+
+    if (caminho) {
+      carregarPagina(caminho);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      console.warn("Caminho não definido no item clicado.");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", controlaMenu);
+

@@ -8,12 +8,12 @@
     <link href="/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="sidebar-aberto">
     <header>
-        <div class="header_logo">
-            <div class="header__toggle">
-                <i id="toggleTheme" class="bi bi-sun"></i>
-            </div>
+        <div class="header__toggle">
+            <i id="toggleTheme" class="bi bi-sun"></i>
+        </div>
+        <div class="header_logo">      
             <img class="veplex-logo" src="/images/veplex-logo.png">
             <div class="toggle-btn-mobile">
                 <button class="toggle-btn" id="toggleSidebar">
@@ -23,23 +23,32 @@
                 </button>
             </div>
         </div>
+
+    </header>
+
+    <div class="layout">
         <aside class="sidebar-wrapper" id="sidebar">
             <nav>
                 <ul class="menu">
-                    <li>Teste?</li>
+                    <li data-caminho="/Pages/home.html">Home</li>
+                    <li data-caminho="/Pages/teste1.html">Como cadastrar um novo promotor?</li>
                     <li>Teste?</li>
                 </ul>
             </nav>
         </aside>
-    </header>
-    <div class="card">
-        <p>Oi</p>
+
+    </div>
+
+    <div class="container">
+        <main id="main-content">
+            <div class="card">
+        </main>
     </div>
 
 
+    <script src="/scripts/menu.js" type="module"></script>
+    <script src="/scripts/router.js" type="module"></script>
 
-    <script src="/js/script.js"></script>
-    
 </body>
 
 </html>
