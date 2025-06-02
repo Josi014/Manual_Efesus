@@ -1,13 +1,13 @@
 :root[data-theme='light'] {
-   --color-fundo: white;
-   --color-opcaoMenu: #333;
-   --sombra-menu: 2px 0 5px 0 rgba(0, 0, 0, 0.5);
-   --sol-lua: black;
-   --color-borderBottom: 1px solid rgba(0, 0, 0, 0.1);
-   --color-cardP: #333;
-   --color-bottomHeader: 1px solid rgb(216 206 246);
-   --sombra-header: 0 5px 20px rgb(150 68 255 / 20%);
-   --colo-fundoHeader: white;
+    --color-fundo: white;
+    --color-opcaoMenu: #333;
+    --sombra-menu: 2px 0 5px 0 rgba(0, 0, 0, 0.5);
+    --sol-lua: black;
+    --color-borderBottom: 1px solid rgba(0, 0, 0, 0.1);
+    --color-cardP: #333;
+    --color-bottomHeader: 1px solid rgb(216 206 246);
+    --sombra-header: 0 5px 20px rgb(150 68 255 / 20%);
+    --colo-fundoHeader: white;
 }
 
 :root[data-theme='dark'] {
@@ -34,11 +34,12 @@
 body {
     flex: 1;
     /* background-color: var(--lfundo-body); */
-    background-color: var(--color-fundo) ;
+    background-color: var(--color-fundo);
     line-height: 1.6;
     user-select: none;
     -webkit-user-drag: none;
     overflow-x: hidden;
+
 }
 
 .header_logo {
@@ -118,10 +119,6 @@ body.sidebar-fechado .sidebar-wrapper {
 }
 
 body.sidebar-aberto .card {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
     padding: 20px;
 }
 
@@ -136,7 +133,7 @@ main#main-content {
 
 body.sidebar-fechado main#main-content,
 body.sidebar-fechado .card,
-body.sidebar-fechado .cardP{
+body.sidebar-fechado .cardP {
     margin-left: 0;
     /* display: flex;
     flex-direction: row;
@@ -165,7 +162,10 @@ li {
 .card {
     position: absolute;
     top: 70px;
-    /* width: 75%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 30px;
     /* box-shadow: 2px 0 30px rgba(0, 0, 0, 0.2); */
 
@@ -187,7 +187,7 @@ li {
 .cardP {
     position: relative;
     text-align: justify;
-    left: 5%;
+    width: 90%;
     color: var(--color-cardP);
 }
 
@@ -197,30 +197,22 @@ li {
 }
 
 @media (max-width: 760px) {
-    li{
+    li {
         font-size: 12px;
-    }
-
-    body.sidebar-fechado .card{
-        flex-direction:column;
     }
 
     body {
         --sidebar-width: 150px;
     }
 
-    /* body.sidebar-aberto .card{
-        padding: 15px;
-    } */
-
-
-    body.sidebar-fechado main#main-content, 
+    body.sidebar-fechado main#main-content,
     body.sidebar-fechado .card {
         padding: 0;
     }
 
-    .cardP{
+    .cardP {
         font-size: 12px;
+        padding: 10px;
     }
 
 
@@ -228,7 +220,7 @@ li {
         transition: transform 0.3s ease;
         position: absolute;
     }
-    
+
     body.sidebar-aberto .card {
         padding: 10px;
     }
@@ -236,5 +228,5 @@ li {
     main#main-content {
         margin-left: 0;
     }
-    
+
 }
