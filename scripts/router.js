@@ -22,36 +22,36 @@ async function carregarPagina(caminho) {
   }
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const root = document.documentElement;
-//   const toggleBtn = document.getElementById("toggleTheme");
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.documentElement;
+  const toggleBtn = document.getElementById("toggleTheme");
 
-//   const setTheme = (theme) => {
-//     root.setAttribute("data-theme", theme);
-//     localStorage.setItem("theme", theme);
+  const setTheme = (theme) => {
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
 
-//     if (toggleBtn) {
-//       toggleBtn.classList.remove("bi-sun");
-//       toggleBtn.classList.remove("bi-moon");
+    if (toggleBtn) {
+      toggleBtn.classList.remove("bi-sun");
+      toggleBtn.classList.remove("bi-moon");
     
     
-//       if (theme === "light") {
-//         toggleBtn.classList.add("bi-sun");
-//       } else {
-//         toggleBtn.classList.add("bi-moon");
-//       }
-//     }
-//   };
+      if (theme === "light") {
+        toggleBtn.classList.add("bi-sun");
+      } else {
+        toggleBtn.classList.add("bi-moon");
+      }
+    }
+  };
 
-//   const toggleTheme = () => {
-//     const newTheme = root.getAttribute("data-theme") === "light" ? "dark" : "light";
-//     setTheme(newTheme);
-//   };
+  const toggleTheme = () => {
+    const newTheme = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
 
-//   setTheme(localStorage.getItem("theme") || "light");
+  setTheme(localStorage.getItem("theme") || "light");
 
-//   toggleBtn?.addEventListener("click", toggleTheme);
-// });
+  toggleBtn?.addEventListener("click", toggleTheme);
+});
 
 
 
