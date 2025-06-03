@@ -1,21 +1,92 @@
-<div class="container">
-    <div class="card">
+<div class="card">
+    <div class="conteudo">
         <div class="cardP">
+            <p>Para cadastrar um promotor com acesso ao UP Promotor e permitir a realização de ações como registro de
+                ponto e visitas pelo aplicativo, é necessário seguir as etapas abaixo:
+            </p><br>
+            <ul class="lista-pages">
+                <li><strong>Cadastro de Funcionário:</strong> O processo se inicia com a busca por um cadastro de
+                    pessoa, proveniente da
+                    integração de dados.
+                </li>
+                <li><strong>Vinculação à Região de Venda:</strong> Após localizar a pessoa, é preciso registrá-la como
+                    funcionário e
+                    vinculá-la a
+                    uma região de venda.
+                </li>
+                <li><strong>Criação de Usuário:</strong> Por fim, para que o promotor possa acessar e utilizar o
+                    aplicativo, é necessário criar
+                    um usuário vinculado ao cadastro anterior.
+                </li>
+            </ul>
+            <br>
             <p>Para registrar um novo funcionário acesse a tela de “Funcionário”.</p>
         </div>
         <div class="card_img">
-
-            <img src="/images/Pages/BarraPesquisaFunc.png" class="img_pages">
-
+            <img src="/images/Pages/Barra_pesquisa_funcionario.png" class="img_pages" onclick="abrirTelaCheia(this.src)"
+                alt="Descrição da imagem">
         </div>
+
+        <hr>
+
         <div class="cardP">
-            <p>Para registrar um novo funcionário acesse a tela de “Funcionário”.</p>
+            <p>Ao acessar a tela de funcionário, deve-se clicar em adicionar para criar um novo funcionário.</p>
         </div>
         <div class="card_img">
-            <img src="/images/Pages/BarraPesquisaFunc.png" class="img_pages">
+            <img src="/images/Pages/Adicionar_funcionario.jpg" class="img_pages" onclick="abrirTelaCheia(this.src)"
+                alt="Descrição da imagem">
         </div>
 
+        <hr>
+        <div class="cardP">
+            <p>Antes de prosseguir com a criação da base, é necessário algumas verificações:</p>
+
+            <ul class="lista-pages">
+                <li>Verificar qual é a base do usuário e confirmar se a criação solicitada deve ser realizada por nossa
+                    equipe.
+                </li>
+                <li>Na tela de adição de funcionário, verifique se o campo “Nome” foi preenchido automaticamente.
+                </li>
+                <li>Caso o nome não seja preenchido automaticamente, é possível que o cadastro da pessoa ainda não
+                    exista ou não tenha sido recebido via integração.
+                    <br>
+                    <strong>
+                        Nesses casos, é necessário validar a existência do cadastro antes de continuar.
+                    </strong>
+                </li>
+                <li><strong>Se tudo estiver conforme o esperado:</strong><br>
+                    Preencha os demais dados do funcionário e após o preenchimento completo, salve o cadastro.
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="card_img">
+            <img src="/images/Pages/cadastrar_funcionario.png" class="img_pages" onclick="abrirTelaCheia(this.src)"
+                alt="Descrição da imagem">
+        </div>
+
+        <hr>
+        <div class="cardP">
+            <p>Após salvar no menu lateral, acesse a opção "Jornada de Trabalho". Nesta tela, você deverá definir os
+                horários que o promotor deverá cumprir. Com base nas informações inseridas, o aplicativo aplicará
+                automaticamente as regras relacionadas ao controle de ponto. É necessário indicar quais dias da semana
+                serão trabalhados e os respectivos horários de entrada e saída para cada dia.</p>
+        </div>
+        <div class="card_img">
+            <img src="/images/Pages/Tela_cadastrar_ponto_antes.png" class="img_pages" onclick="abrirTelaCheia(this.src)"
+                alt="Descrição da imagem">
+        </div>
+
+        <hr>
+
+
+        <div class="cardP">
+            <p>Se for necessário definir um horário diferente para um dia específico da semana, é preciso cadastrá-lo separadamente. Para isso, selecione apenas o dia da semana que terá o horário diferenciado, ajuste o novo horário conforme desejado e clique em “Salvar”. No exemplo abaixo, foi adicionado o sábado, que possui um horário de funcionamento distinto dos outros dias.</p>
+        </div>
+        <div class="card_img">
+            <img src="/images/Pages/Tela_cadastrar_ponto_depois.png" class="img_pages" onclick="abrirTelaCheia(this.src)"
+                alt="Descrição da imagem">
+        </div>
     </div>
-</div>
-
 </div>

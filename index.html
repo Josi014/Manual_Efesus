@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
 
 <body class="sidebar-aberto">
     <header>
-        <div class="header_logo">      
+        <div class="header_logo">
             <img class="veplex-logo" src="/images/veplex-logo.png">
             <div class="header__toggle">
                 <i id="toggleTheme" class="bi bi-sun"></i>
@@ -40,15 +40,19 @@
 
     </div>
 
-    <div class="container">
-        <main id="main-content">
-            <div class="card">
-        </main>
-    </div>
+    <main id="main-content">
+    </main>
 
+
+    <div id="lightbox" class="lightbox" onclick="fecharTela()">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
     <script src="/scripts/menu.js" type="module"></script>
     <script src="/scripts/router.js" type="module"></script>
+    <script src="/scripts/animacoes.js" type="module"></script>
+
 
 </body>
 

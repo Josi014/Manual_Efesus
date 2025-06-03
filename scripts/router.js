@@ -1,3 +1,7 @@
+import {
+  abrirTelaCheia,
+  fecharTela,
+} from "./animacoes.js";
 
 async function carregarPagina(caminho) {
   try {
@@ -12,6 +16,14 @@ async function carregarPagina(caminho) {
 
     // Aguarda uma pequena pausa para garantir que os DOMs estejam processados
     await new Promise((resolve) => setTimeout(resolve, 100)); 
+
+
+    const imagem = conteudoDiv.querySelector(".img-pages");
+    if (imagem) {
+      imagem.addEventListener("click", () => {
+        abrirTelaCheia(imagem.src);
+      });
+    }
 
     return true; 
   } catch (erro) {
@@ -54,5 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+window.abrirTelaCheia = abrirTelaCheia;
+window.fecharTela = fecharTela;
 export { carregarPagina };
