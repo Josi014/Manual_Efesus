@@ -1,15 +1,16 @@
 import { carregarPagina } from "./router.js";
-function controlaMenu() {
-    const toggleBtn = document.getElementById('toggleSidebar');
-    const sidebar = document.getElementById('sidebar');
 
-    if(toggleBtn && sidebar) {
-        toggleBtn.addEventListener("click", () => {
-            document.body.classList.toggle("sidebar-fechado");
-        });
-    } else {
-        console.warn("Botão ou sidebar não encontrado.");
-    }
+function controlaMenu() {
+  const toggleBtn = document.getElementById('toggleSidebar');
+  const sidebar = document.getElementById('sidebar');
+
+  if(toggleBtn && sidebar) {
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("sidebar-fechado");
+    });
+  } else {
+    console.warn("Botão ou sidebar não encontrado.");
+  }
 }
 
 
@@ -20,8 +21,9 @@ itens.forEach(item => {
 
   item.addEventListener("click", () => {
     const caminho = item.dataset.caminho;
+    document.body.classList.toggle("sidebar-fechado");
 
-    if (caminho) {
+    if(caminho) {
       carregarPagina(caminho);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
@@ -31,5 +33,8 @@ itens.forEach(item => {
 });
 
 
-document.addEventListener("DOMContentLoaded", controlaMenu);
+function init() {
+  controlaMenu();
+}
 
+document.addEventListener("DOMContentLoaded", init);

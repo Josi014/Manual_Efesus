@@ -1,5 +1,6 @@
 import {
   abrirTelaCheia,
+  accordion,
   fecharTela,
 } from "./animacoes.js";
 
@@ -12,12 +13,12 @@ async function carregarPagina(caminho) {
     const conteudoDiv = document.getElementById("main-content");
     conteudoDiv.innerHTML = html;
 
-  
+    accordion();  
 
     // Aguarda uma pequena pausa para garantir que os DOMs estejam processados
     await new Promise((resolve) => setTimeout(resolve, 100)); 
 
-
+    
     const imagem = conteudoDiv.querySelector(".img-pages");
     if (imagem) {
       imagem.addEventListener("click", () => {
@@ -65,6 +66,31 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleBtn?.addEventListener("click", toggleTheme);
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener('scroll', () => {
+    // const scrollHeight = document.documentElement.scrollHeight;
+    const scrollTop = document.documentElement.scrollTop;
+    // const clientHeight = document.documentElement.clientHeight;
+
+    let alturaMax = document.documentElement.scrollHeight - window.innerHeight; //Máximo que pode ser scrollado
+
+    let faltando = alturaMax - (alturaMax * 0.5);
+
+    const elemento = document.querySelector("#voltar_inicio_tela");
+
+    if (scrollTop > faltando) {
+      elemento.classList.add("ativar_voltar_inicio_tela");
+      elemento.classList.remove("voltar_inicio_tela");
+      elemento.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    } else{
+      elemento.classList.remove("ativar_voltar_inicio_tela");
+      elemento.classList.add("voltar_inicio_tela");
+    }
+  });
+});
 
 window.abrirTelaCheia = abrirTelaCheia;
 window.fecharTela = fecharTela;

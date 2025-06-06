@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link type="image/x-icon" href="/images/veplex-icon.png" rel="shortcut icon">
+    <title>Documentação</title>
     <link href="/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body class="sidebar-aberto">
@@ -32,17 +36,24 @@
             <nav>
                 <ul class="menu">
                     <li data-caminho="/Pages/home.html">Home</li>
-                    <li data-caminho="/Pages/teste1.html">Como cadastrar um novo promotor?</li>
+                    <li data-caminho="/Pages/cadastro_de_funcionario.html">Como cadastrar um novo promotor?</li>
                     <li>Teste?</li>
                 </ul>
             </nav>
         </aside>
 
+        <main id="main-content">
+        </main>
+        <!-- <div class="div_sumario">
+            <button class="sumario">Sumário</button>
+
+        </div> -->
+
     </div>
 
-    <main id="main-content">
-    </main>
-
+    <div class="container_voltar_inicio">
+        <button class="voltar_inicio_tela" id="voltar_inicio_tela"><i class="bi2 bi-arrow-up-circle-fill"></i></button>
+    </div>
 
     <div id="lightbox" class="lightbox" onclick="fecharTela()">
         <span class="close">&times;</span>
@@ -52,7 +63,6 @@
     <script src="/scripts/menu.js" type="module"></script>
     <script src="/scripts/router.js" type="module"></script>
     <script src="/scripts/animacoes.js" type="module"></script>
-
 
 </body>
 
