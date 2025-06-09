@@ -3,15 +3,14 @@
     <div class="accordion">
 
         <div class="accordion-item">
-            <button class="accordion-header" id="receber_dados">
+            <button class="accordion-header" id="cadastrando_funcionario">
                 <span>Cadastrando um funcionário</span>
                 <i class="fas fa-chevron-down"></i>
             </button>
             <div class="accordion-content">
                 <div class="conteudo">
-
                     <div class="cardP">
-                        <p>Para cadastrar um promotor com acesso ao UP Promotor e permitir a realização de ações como
+                        <p>Para cadastrar um acesso ao UP Promotor e permitir a realização de ações como
                             registro de
                             ponto e visitas pelo aplicativo, é necessário seguir as etapas abaixo:
                         </p><br>
@@ -80,6 +79,7 @@
                         </ul>
 
                     </div>
+
                     <div class="card_img">
                         <img src="/images/Pages/cadastrar_funcionario.png" class="img_pages"
                             onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
@@ -99,6 +99,7 @@
                         <img src="/images/Pages/tela_cadastrar_ponto_antes.png" class="img_pages"
                             onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
                     </div>
+                    <hr>
                     <div class="cardP">
                         <p>Se for necessário definir um horário diferente para um dia específico da semana, é preciso
                             cadastrá-lo
@@ -116,7 +117,7 @@
             </div>
         </div>
         <div class="accordion-item">
-            <button class="accordion-header" id="receber_dados">
+            <button class="accordion-header" id="cadastrando_regiao">
                 <span>Cadastrando a região de venda</span>
                 <i class="fas fa-chevron-down"></i>
             </button>
@@ -195,222 +196,298 @@
 
 
         </div>
+        <div class="accordion-item">
+            <button class="accordion-header" id="vinculando_filial">
+                <span>Vinculando filial</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="conteudo">
+                    <div class="cardP">
+                        <p>Depois de criar a região de venda, é necessário vinculá-la a uma filial. Para isso, no menu
+                            lateral da
+                            tela de região de venda, clique na opção <strong>"Filial"</strong>, selecione a filial
+                            desejada e, em
+                            seguida, clique em <strong>"Salvar"</strong>.
+                        </p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/vincular_filial.png" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header" id="vincula_pessoa">
+                <span>Vinculando pessoa na região de venda</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="conteudo">
+                    <div class="cardP">
+                        <p>Tendo a região de venda criada e a filial vinculada, é necessário vincular uma pessoa a essa
+                            região. Para
+                            isso, acesse o menu
+                            lateral <strong>“Pessoa”</strong>, localize a pessoa desejada, selecione a data de início
+                            (que, por
+                            padrão, deve ser um dia anterior à data atual) e clique em <strong>“Salvar”</strong>.</p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/vincular_pessoa.jpg" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header" id="criando_usuario">
+                <span>Criando usuário</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="conteudo">
+                    <div class="cardP">
+                        <p>Com a região de venda criada, o próximo passo é criar o usuário. Para isso, digite
+                            <strong>"usuário"</strong> na barra de pesquisa e acesse a opção correspondente.
+                        </p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/barra_pesquisa_usuario.jpg" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+
+                    <hr>
+
+                    <div class="cardP">
+                        <p>Para criação de usuário clique em <strong>adicionar</strong> e digite o cpf do promotor.</p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/adicionar_usuario.jpg" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+
+                    <hr>
+
+                    <div class="cardP">
+                        <p>Verifique se o campo <strong>"nome"</strong> foi preenchido automaticamente. Caso positivo,
+                            preencha os
+                            demais campos. Caso contrário, isso indica que o funcionário não possui registro na tabela
+                            de pessoas.
+                        </p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/salvar_usuario.jpg" class="img_pages" onclick="abrirTelaCheia(this.src)"
+                            alt="Descrição da imagem">
+                    </div>
+
+                    <hr>
+                    <div class="cardP">
+                        <p>No aplicativo, é possível visualizar as funcionalidades vinculadas aos dados salvos durante a
+                            criação de
+                            um promotor. Para acessar a opção <strong>"Ponto"</strong>, por exemplo, o usuário deve
+                            atender a alguns
+                            pré-requisitos: o registro de ponto deve estar ativo, conforme definido na criação do
+                            funcionário, e a
+                            jornada de trabalho deve estar cadastrada, incluindo os dias da semana e seus respectivos
+                            horários.</p>
+                        <p>Ao clicar em "Ponto", o sistema realiza as seguintes verificações:</p>
+                        <ul class="lista-pages">
+                            <li>Confirma se o funcionário tem o campo <strong>"Ocorrência Ponto*"</strong> marcada como
+                                Sim no
+                                Efesus;</li>
+                            <li>Verifica se a jornada de trabalho está devidamente registrada;</li>
+                            <li>Identifica o turno em que o promotor está registrando o ponto.</li>
+                        </ul>
+                        <p>O turno pode ser vazio ou não, se for vazio válida a hora de entrada mínima e máxima que foi
+                            definida na
+                            criação de funcionário, se não for vazio serão realizadas as validações para detectar qual
+                            ponto será
+                            batido.</p>
+                        <p><strong>Caso o promotor tenha algum campo que define a validação de sua localização.</strong>
+                        </p>
+                        <p>Junto às validações, o sistema verifica a <strong>lista de clientes</strong> para comparar
+                            coordenadas
+                            utilizando a localização registrado do cliente.</p>
+                        <ul class="lista-pages">
+                            <p><strong>Registro entrada:</strong></p>
+                            <li class="subscrita"><em><strong>Controle de horário e primeiro cliente do plano
+                                        visita</strong> <i class="bi-arrow-right"> compara a coordenada atual com a do
+                                        primeiro cliente no plano de
+                                        visita.</i></em></li>
+                            <li class="subscrita"><em><strong>Controle de horário e cliente do plano visita</strong> <i
+                                        class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer
+                                        cliente do
+                                        plano de visita.</i></em></li>
+                            <li class="subscrita"><em><strong>Controle de horário e cliente da base</strong> <i
+                                        class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer
+                                        cliente da
+                                        base.</i></em></li>
+                            <p><strong>Início intervalo:</strong></p>
+                            <li class="subscrita"><em><strong>Controle de horário e cliente do plano visita</strong> <i
+                                        class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer
+                                        cliente do
+                                        plano de visita.</i></em></li>
+                            <li class="subscrita"><em><strong>Controle de horário e cliente da base</strong> <i
+                                        class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer
+                                        cliente da
+                                        base.</i></em></li>
+                            <p><strong>Registro saída:</strong></p>
+                            <li class="subscrita"><em><strong>Controle de horário e cliente do plano visita</strong> <i
+                                        class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer
+                                        cliente do
+                                        plano de visita.</i></em></li>
+                            <li class="subscrita"><em><strong>Controle de horário e cliente da base</strong> <i
+                                        class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer
+                                        cliente da
+                                        base.</i></em></li>
+
+                        </ul>
+                    </div>
+                    <div class="card_img">
+                        <img style="width: 200px; transform: none; scale: none;"
+                            src="/images/Pages/tela_inicial_aplicativo.jpeg ">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header" id="cadastrando_cliente">
+                <span>Cadastrando clientes na região venda</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="conteudo">
+                    <div class="cardP">
+                        <p>Para que o promotor possa realizar visitas, deve-se existir clientes cadastrados em sua
+                            “Região de
+                            venda”, segue abaixo o passo a passo de como vincular os clientes na região de venda do
+                            promotor.</p>
+                        <p>Primeiramente, acesse a tela de “Região de Venda” pela barra de pesquisa.</p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/barra_pesquisar_regiaoVenda.jpg" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+
+                    <hr>
+
+                    <div class="cardP">
+                        <p>Na região de venda do promotor acesse a opção “Cliente” localizada no menu lateral direito.
+                        </p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/acessar_cliente_regiaoVenda.jpg" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+                    <hr>
+                    <div class="cardP">
+                        <p>Na tela “Cliente” preencha os dados solicitados, geralmente os campos preenchidos são
+                            “Cliente”, “Marca” e “Fabricante”.</p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/vincular_cliente_regiao_venda.jpg" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header" id="vincula_regiao_venda">
+                <span>Vinculando marca na região de venda</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="conteudo">
+                    <div class="cardP">
+                        <p>Com o cliente já vinculado, é necessário associar a marca ao promotor. Para isso, acesse a
+                            opção
+                            <strong>“Marca”</strong> no menu, preencha com as informações da marca desejada e clique em
+                            <strong>“Salvar”</strong>.
+                        </p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/adicionar_marca_regiao_venda.png" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header" id="cadastra_plano_visita">
+                <span>Cadastrando um plano de visita</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="conteudo">
+                    <div class="cardP">
+                        <p>Com o cliente e a marca já cadastrados, o próximo passo é registrar o plano de visita do
+                            promotor. Para
+                            isso, acesse a barra de pesquisa e procure por <strong>"importar Plano de Visita"</strong>.
+                        </p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/barra_pesquisa_importarPlanoVisita.png" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+                    <hr>
+                    <div class="cardP">
+                        <p>Em seguida, preencha os seguintes campos obrigatórios em uma planilha excel:</p>
+                        <ul class="lista-pages">
+                            <li><strong>Cliente</strong></li>
+                            <li><strong>Data Base*</strong></li>
+                            <li><strong>Hora Início da Visita</strong></li>
+                            <li><strong>Hora Término da Visita</strong></li>
+                            <li><strong>Periodicidade*</strong></li>
+                            <li><strong>Atendimento Remoto* (indica se o atendimento será presencial ou remoto)</strong>
+                            </li>
+                        </ul>
+                        <p>Após preencher as informações, exporte o arquivo no formato CSV. Abaixo, segue um exemplo de
+                            implementação.</p>
+
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/csv_plano_visita.png" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+                    <hr>
+                    <div class="cardP">
+                        <p>Na tela <strong>"Importar Plano de Visita"</strong>, selecione o arquivo e clique em
+                            <strong>"Salvar"</strong>.
+                        </p>
+                    </div>
+                    <div class="card_img">
+                        <img src="/images/Pages/importar_plano_visita.png" class="img_pages"
+                            onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
+                    </div>
+                    <hr>
+                    <div class="cardP">
+                        <p>De volta ao aplicativo, após o recebimento dos dados, é possível visualizar o cliente
+                            adicionado ao plano
+                            de visita e iniciar a visita.</p>
+                    </div>
+                    <div class="card_img" style="width: 200px;">
+                        <div class="conjunto_img">
+                            <img src="/images/Pages/aponta_menu.jpeg" class="img_pages_con">
+
+                        </div>
+                        <div class="conjunto_img">
+                            <img src="/images/Pages/menu_aplicativo.jpeg" class="img_pages_con">
+                        </div>
+                        <div class="conjunto_img">
+                            <img src="/images/Pages/plano_visita_depois.jpeg" class="img_pages_con">
+                        </div>
+                        <div class="conjunto_img">
+                            <img src="/images/Pages/iniciar_visita.jpeg" class="img_pages_con">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-        <!-- <div class="cardP">
-            <p>Depois de criar a região de venda, é necessário vinculá-la a uma filial. Para isso, no menu lateral da
-                tela de região de venda, clique na opção <strong>"Filial"</strong>, selecione a filial desejada e, em
-                seguida, clique em <strong>"Salvar"</strong>.
-            </p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/vincular_filial.png" class="img_pages" onclick="abrirTelaCheia(this.src)"
-                alt="Descrição da imagem">
-        </div>
-        <hr>
-        <div class="cardP">
-            <p>Tendo a região de venda criada e a filial vinculada, é necessário vincular uma pessoa a essa região. Para
-                isso, acesse o menu
-                lateral <strong>“Pessoa”</strong>, localize a pessoa desejada, selecione a data de início (que, por
-                padrão, deve ser um dia anterior à data atual) e clique em <strong>“Salvar”</strong>.</p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/vincular_pessoa.jpg" class="img_pages" onclick="abrirTelaCheia(this.src)"
-                alt="Descrição da imagem">
-        </div>
-        <hr>
-
-        <div class="cardP">
-            <p>Com a região de venda criada, o próximo passo é criar o usuário. Para isso, digite
-                <strong>"usuário"</strong> na barra de pesquisa e acesse a opção correspondente.
-            </p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/barra_pesquisa_usuario.jpg" class="img_pages" onclick="abrirTelaCheia(this.src)"
-                alt="Descrição da imagem">
-        </div>
-
-        <hr>
-
-        <div class="cardP">
-            <p>Para criação de usuário clique em <strong>adicionar</strong> e digite o cpf do promotor.</p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/adicionar_usuario.jpg" class="img_pages" onclick="abrirTelaCheia(this.src)"
-                alt="Descrição da imagem">
-        </div>
-
-        <hr>
-
-        <div class="cardP">
-            <p>Verifique se o campo <strong>"nome"</strong> foi preenchido automaticamente. Caso positivo, preencha os
-                demais campos. Caso contrário, isso indica que o funcionário não possui registro na tabela de pessoas.
-            </p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/salvar_usuario.jpg" class="img_pages" onclick="abrirTelaCheia(this.src)"
-                alt="Descrição da imagem">
-        </div>
-
-        <hr>
-        <div class="cardP">
-            <p>No aplicativo, é possível visualizar as funcionalidades vinculadas aos dados salvos durante a criação de
-                um promotor. Para acessar a opção <strong>"Ponto"</strong>, por exemplo, o usuário deve atender a alguns
-                pré-requisitos: o registro de ponto deve estar ativo, conforme definido na criação do funcionário, e a
-                jornada de trabalho deve estar cadastrada, incluindo os dias da semana e seus respectivos horários.</p>
-            <p>Ao clicar em "Ponto", o sistema realiza as seguintes verificações:</p>
-            <ul class="lista-pages">
-                <li>Confirma se o funcionário tem o campo <strong>"Ocorrência Ponto*"</strong> marcada como Sim no
-                    Efesus;</li>
-                <li>Verifica se a jornada de trabalho está devidamente registrada;</li>
-                <li>Identifica o turno em que o promotor está registrando o ponto.</li>
-            </ul>
-            <p>O turno pode ser vazio ou não, se for vazio válida a hora de entrada mínima e máxima que foi definida na
-                criação de funcionário, se não for vazio serão realizadas as validações para detectar qual ponto será
-                batido.</p>
-            <p><strong>Caso o promotor tenha algum campo que define a validação de sua localização.</strong></p>
-            <p>Junto às validações, o sistema verifica a <strong>lista de clientes</strong> para comparar coordenadas
-                utilizando a localização registrado do cliente.</p>
-            <ul class="lista-pages">
-                <p><strong>Registro entrada:</strong></p>
-                <li class="subscrita"><em><strong>Controle de horário e primeiro cliente do plano visita</strong> <i
-                            class="bi-arrow-right"> compara a coordenada atual com a do primeiro cliente no plano de
-                            visita.</i></em></li>
-                <li class="subscrita"><em><strong>Controle de horário e cliente do plano visita</strong> <i
-                            class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer cliente do
-                            plano de visita.</i></em></li>
-                <li class="subscrita"><em><strong>Controle de horário e cliente da base</strong> <i
-                            class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer cliente da
-                            base.</i></em></li>
-                <p><strong>Início intervalo:</strong></p>
-                <li class="subscrita"><em><strong>Controle de horário e cliente do plano visita</strong> <i
-                            class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer cliente do
-                            plano de visita.</i></em></li>
-                <li class="subscrita"><em><strong>Controle de horário e cliente da base</strong> <i
-                            class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer cliente da
-                            base.</i></em></li>
-                <p><strong>Registro saída:</strong></p>
-                <li class="subscrita"><em><strong>Controle de horário e cliente do plano visita</strong> <i
-                            class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer cliente do
-                            plano de visita.</i></em></li>
-                <li class="subscrita"><em><strong>Controle de horário e cliente da base</strong> <i
-                            class="bi-arrow-right"> compara a coordenada atual com a coordenada de qualquer cliente da
-                            base.</i></em></li>
-
-            </ul>
-        </div>
-        <div class="card_img">
-            <img style="width: 200px; transform: none; scale: none;" src="/images/Pages/tela_inicial_aplicativo.jpeg ">
-        </div>
-
-        <hr>
-
-        <div class="cardP">
-            <p>Para que o promotor possa realizar visitas, deve-se existir clientes cadastrados em sua “Região de
-                venda”, segue abaixo o passo a passo de como vincular os clientes na região de venda do promotor.</p>
-            <p>Primeiramente, acesse a tela de “Região de Venda” pela barra de pesquisa.</p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/barra_pesquisar_regiaoVenda.jpg" class="img_pages"
-                onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
-        </div>
-
-        <hr>
-
-        <div class="cardP">
-            <p>Na região de venda do promotor acesse a opção “Cliente” localizada no menu lateral direito.</p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/acessar_cliente_regiaoVenda.jpg" class="img_pages"
-                onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
-        </div>
-        <hr>
-        <div class="cardP">
-            <p>Na tela “Cliente” preencha os dados solicitados, geralmente os campos preenchidos são
-                “Cliente”, “Marca” e “Fabricante”.</p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/vincular_cliente_regiao_venda.jpg" class="img_pages"
-                onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
-        </div>
-        <hr>
-        <div class="cardP">
-            <p>Com o cliente já vinculado, é necessário associar a marca ao promotor. Para isso, acesse a opção
-                <strong>“Marca”</strong> no menu, preencha com as informações da marca desejada e clique em
-                <strong>“Salvar”</strong>.
-            </p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/adicionar_marca_regiao_venda.png" class="img_pages"
-                onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
-        </div>
-        <hr>
-        <div class="cardP">
-            <p>Ao acessar a opção <strong>"Clientes"</strong> no menu do aplicativo UP Promotor, é possível visualizar
-                os clientes vinculados ao plano de visita do dia. No entanto, como ainda não realizamos o cadastro de um
-                plano de visita, não há nenhuma informação disponível no momento.</p>
-        </div>
-        <div class="card_img" style="width: 200px;">
-            <div class="conjunto_img">
-                <img src="/images/Pages/aponta_menu.jpeg" class="img_pages_con">
-
-            </div>
-            <div class="conjunto_img">
-                <img src="/images/Pages/menu_aplicativo.jpeg" class="img_pages_con">
-            </div>
-            <div class="conjunto_img">
-                <img src="/images/Pages/plano_visita_antes.jpeg" class="img_pages_con">
-            </div>
-        </div>
-        <hr>
-        <div class="cardP">
-            <p>Com o cliente e a marca já cadastrados, o próximo passo é registrar o plano de visita do promotor. Para
-                isso, acesse a barra de pesquisa e procure por <strong>"importar Plano de Visita"</strong>.</p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/barra_pesquisa_importarPlanoVisita.png" class="img_pages"
-                onclick="abrirTelaCheia(this.src)" alt="Descrição da imagem">
-        </div>
-        <hr>
-        <div class="cardP">
-            <p>Em seguida, preencha os seguintes campos obrigatórios em uma planilha excel:</p>
-            <ul class="lista-pages">
-                <li><strong>Cliente</strong></li>
-                <li><strong>Data Base*</strong></li>
-                <li><strong>Hora Início da Visita</strong></li>
-                <li><strong>Hora Término da Visita</strong></li>
-                <li><strong>Periodicidade*</strong></li>
-                <li><strong>Atendimento Remoto* (indica se o atendimento será presencial ou remoto)</strong></li>
-            </ul>
-            <p>Após preencher as informações, exporte o arquivo no formato CSV. Abaixo, segue um exemplo de
-                implementação.</p>
-
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/csv_plano_visita.png" class="img_pages" onclick="abrirTelaCheia(this.src)"
-                alt="Descrição da imagem">
-        </div>
-        <hr>
-        <div class="cardP">
-            <p>Na tela <strong>"Importar Plano de Visita"</strong>, selecione o arquivo e clique em
-                <strong>"Salvar"</strong>.
-            </p>
-        </div>
-        <div class="card_img">
-            <img src="/images/Pages/importar_plano_visita.png" class="img_pages" onclick="abrirTelaCheia(this.src)"
-                alt="Descrição da imagem">
-        </div>
-        <hr>
-        <div class="cardP">
-            <p>De volta ao aplicativo, após o recebimento dos dados, é possível visualizar o cliente adicionado ao plano
-                de visita e iniciar a visita.</p>
-        </div>
-        <div class="card_img" style="width: 200px;">
-            <div class="conjunto_img">
-                <img src="/images/Pages/plano_visita_depois." class="img_pages_con">
-            </div>
-            <div class="conjunto_img">
-                <img src="/images/Pages/iniciar_visita.jpeg" class="img_pages_con">
-            </div>
-        </div>
-    </div> -->
+</div>
