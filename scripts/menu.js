@@ -1,16 +1,22 @@
 import { carregarPagina } from "./router.js";
+import{closeAllAccordions} from "./animacoes.js";
 
 function controlaMenu() {
   const toggleBtn = document.getElementById('toggleSidebar');
   const sidebar = document.getElementById('sidebar');
+  const fechado=document.querySelector("sidebar-fechado");
+  const aberto=document.querySelector("sidebar-aberto");
 
   if(toggleBtn && sidebar) {
     toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("sidebar-fechado");
+      document.body.classList.toggle("sidebar-fechado"); 
+      // closeAllAccordions();
+  
     });
   } else {
     console.warn("Botão ou sidebar não encontrado.");
   }
+
 }
 
 

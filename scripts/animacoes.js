@@ -44,14 +44,14 @@ export function accordion() {
 }
 
 
-// export function closeAllAccordions() {
-//   const accordionHeaders = document.querySelectorAll('.accordion-header');
-//   accordionHeaders.forEach(header => {
-//     header.classList.remove('active');
-//     const content = header.nextElementSibling;
-//     content.style.maxHeight = '0';
-//   });
-// }
+export function closeAllAccordions() {
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    header.classList.remove('active');
+    const content = header.nextElementSibling;
+    content.style.maxHeight = '0';
+  });
+}
 
 
 

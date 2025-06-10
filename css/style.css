@@ -51,7 +51,7 @@ body {
     user-select: none;
     -webkit-user-drag: none;
     overflow-x: hidden;
-    --sidebar-width: 200px;
+    --sidebar-width: 300px;
     margin: 0;
     padding: 0;
     font-family: 'Lexend', sans-serif;
@@ -98,6 +98,7 @@ body {
     filter: drop-shadow(1px 0 0 gray) drop-shadow(0 1px 0 gray) drop-shadow(-1px 0 0 gray) drop-shadow(0 -1px 0 gray);
     border-radius: 2px;
     display: block;
+
 }
 
 .toggle-btn-mobile {
@@ -147,12 +148,37 @@ body.sidebar-fechado .sidebar-wrapper {
     box-shadow: none;
 }
 
-body.sidebar-aberto .card {
-    padding: 20px;
+
+body.sidebar-aberto .card_img_conjunto_mobile {
+    display: flex;
+    flex-direction: row;
 }
 
-body.sidebar-aberto .container_voltar_inicio{
-    margin-left: var(--sidebar-width);
+body.sidebar-aberto .card_img_conjunto {
+    margin-bottom: 15px;
+    padding: 0;
+    flex-direction: column;
+}
+
+
+body.sidebar-fechado .card_img_conjunto_mobile {
+    display: flex;
+    flex-direction: row;
+}
+
+body.sidebar-fechado .card_img_conjunto {
+    margin-bottom: 15px;
+    padding: 0;
+    flex-direction: row;
+}
+
+/* body.sidebar-aberto .card_img_conjunto {
+    margin-bottom: 15px;
+    flex-direction: column;
+} */
+
+body.sidebar-aberto .card {
+    padding: 20px;
 }
 
 main#main-content {
@@ -169,12 +195,6 @@ body.sidebar-fechado .card,
 body.sidebar-fechado .cardP,
 body.sidebar-fechado .container_voltar_inicio {
     margin-left: 0;
-    /* display: flex;
-    flex-direction: row;
-    width: 90%;
-    padding: 20px;
-    margin: 0 auto;
-    left: 0; */
 }
 
 .header__toggle {
@@ -200,7 +220,7 @@ body.sidebar-fechado .container_voltar_inicio {
     padding: 30px;
 }
 
-.accordion{
+.accordion {
     box-shadow: 0 4px 6px rgb(0 0 0 / 49%);
 }
 
@@ -230,6 +250,19 @@ hr {
     /* padding: 20px; */
     filter: var(--camada-escura);
 }
+
+.card_img_conjunto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .card_img_conjunto_mobile {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+} */
 
 .img_pages {
     width: 90%;
@@ -294,19 +327,6 @@ ul.lista-pages {
     cursor: pointer;
 }
 
-/* .vtopo_da_Tela {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px; 
-    padding: 5px;
-}
-
-.bi2 {
-    font-size: 25px;
-} */
-
 .voltar_inicio_tela {
     display: none;
 }
@@ -340,7 +360,8 @@ ul.lista-pages {
 .container_voltar_inicio {
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    margin-left:  var(--sidebar-width);
 }
 
 .subscrita {
@@ -348,24 +369,13 @@ ul.lista-pages {
 }
 
 .conjunto_img {
-    margin-left: 15px;
+    margin: 5px;
 }
 
-.div_sumario{
+.div_sumario {
     display: flex;
     margin: 0 auto;
     width: 90%;
-}
-
-.sumario{
-    position: relative; 
-    background-color: var(--color-sumario);
-    top: 100px;
-    width: 100%;
-    height: 20px;
-    color: white;
-    border: none;
-    border-radius: 20px;
 }
 
 .accordion-header {
@@ -407,31 +417,34 @@ ul.lista-pages {
 
 }
 
-.accordion-item span{
+.accordion-item span {
     color: var(--color-span);
     font-size: 20px;
 }
 
-.fas{
+.fas {
     color: var(--color-span);
 }
 
-.title{
+.title {
     display: flex;
     text-align: center;
 }
 
 @media (max-width: 1100px) {
-    .card_img {
+
+    body.sidebar-fechado .card_img_conjunto {
         display: flex;
         flex-direction: column;
     }
+
     .img_pages_con {
         margin-bottom: 15px;
     }
+
 }
 
-@media (max-width: 760px) {
+@media (max-width: 870px) {
 
     li {
         font-size: 12px;
@@ -450,7 +463,6 @@ ul.lista-pages {
         font-size: 15px;
         padding: 10px;
     }
-
 
     .sidebar-wrapper {
         transition: transform 0.3s ease;
@@ -484,9 +496,15 @@ ul.lista-pages {
 
     }
 
-    .card_img {
+    body.sidebar-aberto .card_img_conjunto_mobile {
         display: flex;
         flex-direction: column;
+    }
+
+    body.sidebar-fechado .card_img_conjunto_mobile {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
     }
 
     .img_pages_con {
@@ -498,12 +516,15 @@ ul.lista-pages {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
-    .accordion-header{
+    .accordion-header {
         padding: 20px;
     }
 
-    .accordion-item span{
+    .accordion-item span {
         font-size: 15px;
     }
 
+    .conjunto_img {
+        margin: 0;
+    }
 }
