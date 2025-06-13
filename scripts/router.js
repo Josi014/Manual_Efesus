@@ -13,10 +13,9 @@ async function carregarPagina(caminho) {
     const conteudoDiv = document.getElementById("main-content");
     conteudoDiv.innerHTML = html;
 
-    accordion();  
-
     // Aguarda uma pequena pausa para garantir que os DOMs estejam processados
     await new Promise((resolve) => setTimeout(resolve, 100)); 
+    accordion();  
 
     
     const imagem = conteudoDiv.querySelector(".img-pages");
