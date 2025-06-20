@@ -4,6 +4,7 @@ import {
   fecharTela,
 } from "./animacoes.js";
 
+
 async function carregarPagina(caminho) {
   try {
     const resposta = await fetch(caminho);

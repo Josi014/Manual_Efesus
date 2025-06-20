@@ -1,15 +1,18 @@
 import { carregarPagina } from "./router.js";
-import { closeAllAccordions, accordion } from "./animacoes.js";
 
 function controlaMenu() {
   const toggleBtn = document.getElementById('toggleSidebar');
   const sidebar = document.getElementById('sidebar');
-  const fechado = document.querySelector("sidebar-fechado");
-  const aberto = document.querySelector("sidebar-aberto");
+  const menu = document.getElementById('menu');
 
-  if(toggleBtn && sidebar) {
-    // if(toggleBtn && sidebar )
+  if(toggleBtn || menu || sidebar) {
     toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("sidebar-fechado");
+    });
+    menu.addEventListener("click", () => {
+      document.body.classList.toggle("sidebar-fechado");
+    });
+    sidebar.addEventListener("click", () => {
       document.body.classList.toggle("sidebar-fechado");
     });
   } else {
