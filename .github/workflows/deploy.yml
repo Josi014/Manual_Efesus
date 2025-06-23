@@ -10,13 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
+      - name: Checkout do repositório privado
         uses: actions/checkout@v3
 
-      - name: Copiar arquivos reais
+      - name: Copiar arquivos reais do site
         run: |
           mkdir -p dist
-          cp -r index.html css scripts images Pages dist/
+          cp index.html dist/
+          cp -r css scripts images Pages dados dist/
 
       - name: Deploy para repositório público
         uses: peaceiris/actions-gh-pages@v3
