@@ -1,0 +1,28 @@
+name: Deploy para GitHub Pages Público
+
+on:
+  push:
+    branches:
+      - main  # ou outra branch que você usa
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório privado
+        uses: actions/checkout@v3
+
+      # Simula uma pasta de saída para publicação (substitua se necessário)
+      - name: Criar pasta de saída
+        run: |
+          mkdir dist
+          echo "<h1>Deploy automático funcionando!</h1>" > dist/index.html
+
+      - name: Deploy para repositório público
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          external_repository: Josi014/Manual_Efesus_public
+          publish_dir: ./dist
+          personal_token: ${{ secrets.PUBLISH_TOKEN }}
+          publish_branch: main
