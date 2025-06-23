@@ -3,7 +3,7 @@ name: Deploy para GitHub Pages Público
 on:
   push:
     branches:
-      - main  # ou outra branch que você usa
+      - main
 
 jobs:
   deploy:
@@ -13,11 +13,11 @@ jobs:
       - name: Checkout do repositório privado
         uses: actions/checkout@v3
 
-      # Simula uma pasta de saída para publicação (substitua se necessário)
-      - name: Criar pasta de saída
+      - name: Copiar arquivos reais do site
         run: |
-          mkdir dist
-          echo "<h1>Deploy automático funcionando!</h1>" > dist/index.html
+          mkdir -p dist
+          cp index.html dist/
+          cp -r css scripts images Pages dist/
 
       - name: Deploy para repositório público
         uses: peaceiris/actions-gh-pages@v3
