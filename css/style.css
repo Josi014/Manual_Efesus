@@ -175,15 +175,9 @@ body.sidebar-fechado .card_img_conjunto {
     flex-direction: row;
 }
 
-body.sidebar-aberto .carousel{
-    margin-left: calc(var(--sidebar-width) - 10%);
-}
-
-
 body.sidebar-fechado .carousel{
     margin-left: 0;
 }
-
 
 /* body.sidebar-aberto .card_img_conjunto {
     margin-bottom: 15px;
@@ -447,7 +441,7 @@ ul.lista-pages {
     position: absolute;
     display: block;
     overflow: hidden;
-    width: 50%;
+    width: 100%;
     top: 200px;
     left: 50%;
     transform: translateX(-50%);
