@@ -7,13 +7,13 @@ function controlaMenu() {
 
   if(toggleBtn || menu || sidebar) {
     toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("sidebar-fechado");
+      document.body.classList.toggle("sidebar-closed");
     });
     menu.addEventListener("click", () => {
-      document.body.classList.toggle("sidebar-fechado");
+      document.body.classList.toggle("sidebar-closed");
     });
     sidebar.addEventListener("click", () => {
-      document.body.classList.toggle("sidebar-fechado");
+      document.body.classList.toggle("sidebar-closed");
     });
   } else {
     console.warn("Botão ou sidebar não encontrado.");
@@ -29,7 +29,7 @@ itens.forEach(item => {
 
   item.addEventListener("click", () => {
     const caminho = item.dataset.caminho;
-    document.body.classList.toggle("sidebar-fechado");
+    document.body.classList.toggle("sidebar-closed");
     if(caminho) {
       carregarPagina(caminho);
       window.scrollTo({ top: 0, behavior: 'smooth' });

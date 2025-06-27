@@ -2,7 +2,7 @@ import {
   abrirTelaCheia,
   accordion,
   fecharTela,
-} from "./animacoes.js";
+} from "./animations.js";
 
 
 async function carregarPagina(caminho) {
@@ -77,17 +77,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let faltando = alturaMax - (alturaMax * 0.5);
 
-    const elemento = document.querySelector("#voltar_inicio_tela");
+    const elemento = document.querySelector("#return_to_home_screen");
 
     if (scrollTop > faltando) {
-      elemento.classList.add("ativar_voltar_inicio_tela");
-      elemento.classList.remove("voltar_inicio_tela");
+      elemento.classList.add("activate_back_home_screen");
+      elemento.classList.remove("return_to_home_screen");
       elemento.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     } else{
-      elemento.classList.remove("ativar_voltar_inicio_tela");
-      elemento.classList.add("voltar_inicio_tela");
+      elemento.classList.remove("activate_back_home_screen");
+      elemento.classList.add("return_to_home_screen");
     }
   });
 });
